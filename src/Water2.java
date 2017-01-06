@@ -19,7 +19,7 @@ public class Water2 {
             }   while ( !z.isvalid(choice));
             if (choice == 'q')break;
 
-            System.out.println("* * * * * *");
+            System.out.println("* * * * * * *");
             x.m = 10;
             x.n = 23000;
             int v = x.countV();
