@@ -7,7 +7,7 @@ public class ArraysBubble {
         int size = 15;
         int nums[] = new int[size];
         int min = 0;//поиск минимального элемента массива
-        int max=0;//поиск максимального элемента массива
+        int max = 0;//поиск максимального элемента массива
 
         System.out.println();//случайный массив
         System.out.println("Исходный случайный массив до сортировки имеет вид:");
@@ -40,18 +40,18 @@ public class ArraysBubble {
                 }
             }
         }
-        System.out.println("Минимальный элемент массива min="+min);
+        System.out.println("Минимальный элемент массива min=" + min);
 
         //поиск максимального элемента массива
         //System.out.println();
-        for (int i=0; i<nums.length; i++){
-            max=nums[i];
-            for (int j=0; j<nums.length; j++ ){
-                if(max<nums[j]){
-                    max=nums[j];
+        for (int i = 0; i < nums.length; i++) {
+            max = nums[i];
+            for (int j = 0; j < nums.length; j++) {
+                if (max < nums[j]) {
+                    max = nums[j];
                 }
             }
         }
-        System.out.println("Максимальный элемент массива max="+max);
+        System.out.println("Максимальный элемент массива max=" + max);
     }
 }
