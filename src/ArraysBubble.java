@@ -24,6 +24,7 @@ public class ArraysBubble {
                     nums[b] = t;
                 }
             }
+
         System.out.println();
         System.out.println("Итоговый массив после сортировки имеет вид:");
         for (int i = 0; i < nums.length; i++) {
