@@ -52,6 +52,7 @@ public class ArraysBubble {
                 }
             }
         }
+
         System.out.println("Максимальный элемент массива max=" + max);
     }
 }
