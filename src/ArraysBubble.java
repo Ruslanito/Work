@@ -12,7 +12,7 @@ public class ArraysBubble {
         System.out.println();//случайный массив
         System.out.println("Исходный случайный массив до сортировки имеет вид:");
         for (int i = 0; i < nums.length; i++) {
-            nums[i] = (int) Math.round(Math.random() * 100);
+            nums[i] = (int) Math.round(Math.random() * 1000);
             System.out.print(nums[i] + " ");
         }
 
