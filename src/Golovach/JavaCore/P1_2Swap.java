@@ -18,10 +18,17 @@ public class P1_2Swap {
         System.out.println("a="+a);
         System.out.println("b="+b);
 
-        System.out.println("вариант №2 (сумма и разность)");
+        System.out.println("вариант №2 для int (без переменной)");
         a = a+b;
         b = a-b;
         a = a-b;
+        System.out.println("a="+a);
+        System.out.println("b="+b);
+
+        System.out.println("вариант №3 для int (без переменной)");
+        a = a^b;
+        b = a^b;
+        a = a^b;
         System.out.println("a="+a);
         System.out.println("b="+b);
 
