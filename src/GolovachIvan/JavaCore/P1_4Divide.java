@@ -1,4 +1,4 @@
-package Golovach.JavaCore;
+package GolovachIvan.JavaCore;
 
 import java.util.DoubleSummaryStatistics;
 
