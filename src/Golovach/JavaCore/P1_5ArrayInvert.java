@@ -7,8 +7,8 @@ import java.util.Arrays;
  */
 public class P1_5ArrayInvert {
     public static void main(String[] args) {
-        int[] arr = new int[10];
-        int[] arr2 = new int[10];
+        int[] arr = new int[5];
+        int[] arr2 = new int[5];
         int i, k, m;
 
         m = arr2.length;
