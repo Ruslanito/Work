@@ -1,0 +1,231 @@
+*****Frame
+1. import javax.swing.JFrame;
+public class Frame {
+	public static void main (String args[]){
+		Frame3 r = new Frame3("Дорога");
+		r.setVisible(true);
+		r.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		r.setSize(300,200);
+		r.setResizable(false);
+		r.setLocationRelativeTo(null);
+	}
+}
+
+2. //import javax.swing.*;
+//import java.awt.*;
+//import java.awt.event.*;
+
+//public class Frame2 extends JFrame{
+	//JButton b1, b2;
+	//JLabel l1, l2, l3, l4;
+	//JTextField t1, t2;
+	//int i, k;
+	//String a, b;
+	
+		//public Frame2(String s){
+		//super(s);
+		//setLayout(new FlowLayout());
+		//b1 = new JButton("Очистить");
+		//b2 = new JButton("Посчитать");
+		//l1 = new JLabel("Введите первое число:");
+		//l2 = new JLabel("Введите второе число:");
+		//l3 = new JLabel("");
+		//l4 = new JLabel("");
+		//t1 = new JTextField(10);
+		//t2 = new JTextField(10);
+		//add(b1);
+		//add(b2);
+		//add(l1);
+		//add(t1);
+		//add(l2);
+		//add(t2);
+		//add(l3);
+		//add(l4);
+		//}
+//}
+
+3. public class Frame3 extends JFrame{
+	JButton b1, b2;
+	JLabel l1, l2, l3, l4;
+	JTextField t1, t2;
+	int i, k;
+	String a, b;
+	eHandler handler = new eHandler();
+	
+		public Frame3(String s){
+		super(s);
+		setLayout(new FlowLayout());
+		b1 = new JButton("Очистить");
+		b2 = new JButton("Посчитать");
+		l1 = new JLabel("Введите первое число:");
+		l2 = new JLabel("Введите второе число:");
+		l3 = new JLabel("");
+		l4 = new JLabel("");
+		t1 = new JTextField(10);
+		t2 = new JTextField(10);
+		add(t1);
+		add(l1);
+		add(t2);
+		add(l2);
+		add(b2);
+		add(b1);
+		add(l3);
+		add(l4);
+		b2.addActionListener(handler);
+		b1.addActionListener(handler);
+		
+		}
+				public class eHandler implements ActionListener {
+			public void actionPerformed(ActionEvent e) {
+			if (e.getSource()==b2){
+				i = Integer.parseInt(t1.getText());
+				k = Integer.parseInt(t2.getText());
+				i=i+1;
+				k++;
+				a = "Ваше первое число равно "+i;
+				b = "Ваше второе число равно "+k;
+				l3.setText(a);
+				l4.setText(b);
+				
+			if (e.getSource()==b1){
+				t1.setText(null);
+				t2.setText(null);
+				l3.setText(null);
+				l4.setText(null);
+			}
+			}
+		}
+	}
+}
+*****
+
+*****Ввод с клавиатуры с использванием класса Scanner.
+Пример:
+import java.util.Scanner;
+public class Input {
+	public static void main(String[] args) {
+		Scanner i=new Scanner(System.in);
+		System.out.println("Введите текст");
+		String x=i.nextLine();//Ввод строк
+		System.out.println("текст "+x);
+		System.out.println("Введите целое число");
+		int z=i.nextInt(); //Ввод целого числа
+		System.out.println("число "+z);
+	}
+}
+*****
+
+*****Поиск элемента массива
+public class Array_Finder {
+	public static void main(String[] args) {
+	char[] arr={'a','b','c','d','e'};
+	char af='c';
+		for (int i=0; i<=arr.length; i++){
+			System.out.println (i);
+			char elem=arr[i];
+			if (elem==af){
+				System.out.println ();
+				System.out.print("искомый элемент массива равен "+i);
+				break;
+			}
+			System.out.println ("выполнена обработка элемента №"+i);
+		}
+	}
+}
+
+*****
+
+*****Перегрузка методов (Overload)
+	Несколько методов одного класса могут иметь одно и то же имя, отличаясь лишь набором параметров. 
+	Перегрузка методов один из способоа полиморфизма в Java (один интерфейс - множество методов).
+	Для перезагрузки метода, достаточно лишь объявить его новый вариант, отличающийся от уже существующих. 
+	Необходимо соблюсти одно условие: тип и/или число параметров в каждом из перезагружаемых методов должны быт разными (отличия возвращаемых типов недостаточно для перегрузки метода)
+	
+ПРИМЕР: перегрузка метода "ovl" 4 раза. 	
+	class Overload {
+    void ovl (){ // версия метода без параметров
+        System.out.println("ovl без параметров");
+    }
+    void ovl (int a){// версия с 1-м параметром
+        System.out.println("ovl с одним параметром: int a="+a);
+    }
+    int ovl (int a, int b){// версия с 2-мя параметрами
+        System.out.println("ovl с 2-мя параметрами: int a="+a+" и int b="+b);
+        return a+b;
+    }
+    double ovl (double a, double b){//версия с 2-мя параметрами
+        System.out.println("ovl с 2-мя параметрами: double a="+a+" и double b="+b);
+        return a+b;
+    }
+}
+
+public class MethodOverload {
+    public static void main(String[] args) {
+        Overload obj = new Overload();
+        int resInt;
+        double resDouble;
+
+        System.out.println("Вызываем методы по очереди");
+
+        obj.ovl();
+
+        System.out.println();
+        obj.ovl(5);
+
+        System.out.println();
+        resInt = obj.ovl(10,73);
+        System.out.println("Результат вызова метода obj.ovl(10,73) ="+resInt);
+
+        System.out.println();
+        resDouble = obj.ovl(1.5,3.14);
+        System.out.println("Результат вызова метода obj.ovl(1.5,3.14) ="+resDouble);
+    }
+}
+*****
+
+*****Перегрузка конструкторов (Overload)
+	Перегрузка конструкторов позволяет конструировать объекты самыми разными способами.
+	Во всех перегруженных версиях конструктор строится по разному. 
+	Конкретный тип конструктора выбирается на основании переметров, которые указываются при выполнени оператора new.
+		
+ПРИМЕР:
+class  MyClass{
+    int x;
+
+    MyClass(){
+        System.out.println("Внутри MyClass().");
+        x=0;
+    }
+
+    MyClass(int i){
+        System.out.println("Внутри MyClass(int).");
+        x=i;
+    }
+
+    MyClass(double d){
+        System.out.println("Внутри MyClass(double).");
+        x=(int)d;
+    }
+
+    MyClass(int i, int j){
+        System.out.println("Внутри MyClass(int, int).");
+        x=i*j;
+    }
+}
+
+public class OverloadConstructor {
+    public static void main(String[] args) {
+        MyClass t1 = new MyClass();
+        MyClass t2 = new MyClass(77);
+        MyClass t3 = new MyClass(3.14);
+        MyClass t4 = new MyClass(5,8);
+
+        System.out.println("t1.x: "+t1.x);
+        System.out.println("t2.x: "+t2.x);
+        System.out.println("t3.x: "+t3.x);
+        System.out.println("t4.x: "+t4.x);
+    }
+}
+*****
+
+*****

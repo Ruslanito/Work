@@ -1,4 +1,4 @@
-package Golovach.JavaCore;
+package GolovachIvan.JavaCore;
 import java.util.Arrays;
 /**
  * Created by Ruslanito on 08.02.2017.
