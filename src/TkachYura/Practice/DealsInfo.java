@@ -92,6 +92,8 @@ public class DealsInfo {
                 summ = summ + products.getCost();
             }
             return summ;
+
+
         }
     }
 
