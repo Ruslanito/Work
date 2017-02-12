@@ -1,7 +1,7 @@
 /**
  * Created by user on 14.01.2017.
  */
-public class CandObj_SetGat2_this {
+public class CandObj_SetGet2_this {
     public static void main(String[] args) {
         Human human1 = new Human ();
         human1.setAge(18);
