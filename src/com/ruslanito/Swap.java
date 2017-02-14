@@ -9,10 +9,10 @@ public class Swap {
         int b = -10;
         System.out.print("Исходные переменные до замены:");
         System.out.println(" a=" + a + "; b=" + b);
-        Swap4 s = new Swap4(a, b);
-        s.change(s);
+        Swap4 swap = new Swap4(a, b);
+        swap.change(swap);
         System.out.print("Переменные после замены через объект:");
-        System.out.println(" a=" + s.a + "; b=" + s.b);
+        System.out.println(" a=" + swap.a + "; b=" + swap.b);
         int tmp = a;
         a = b;
         b = tmp;
@@ -20,6 +20,7 @@ public class Swap {
         System.out.println(" a=" + a + "; b=" + b);
     }
 }
+
 class Swap4 {
     int a, b;
 
@@ -27,9 +28,9 @@ class Swap4 {
         a = i;
         b = j;
     }
-    void change(Swap4 s) {
-        int tmp = s.a;
-        s.a = s.b;
-        s.b = tmp;
+    void change(Swap4 swap) {
+        int tmp = swap.a;
+        swap.a = swap.b;
+        swap.b = tmp;
     }
 }
