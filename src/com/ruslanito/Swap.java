@@ -13,6 +13,7 @@ public class Swap {
         swap.change(swap);
         System.out.print("Переменные после замены через объект:");
         System.out.println(" a=" + swap.a + "; b=" + swap.b);
+
         int tmp = a;
         a = b;
         b = tmp;
