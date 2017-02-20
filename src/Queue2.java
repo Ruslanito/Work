@@ -5,7 +5,7 @@ public class Queue2 {
     private char q[];
     private int putloc, getloc;
 
-    Queue2(int size) {
+  /*  Queue2(int size) {
         Queue2(Queue2 ob) {
             putloc = ob.putloc;
             getloc = ob.getloc;
@@ -28,4 +28,5 @@ public class Queue2 {
 
     }
     }
+    */
 }
