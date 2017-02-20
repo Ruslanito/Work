@@ -5,6 +5,8 @@ import java.util.Date;
 /**
  * Created by Ruslanito on 11.02.2017.
  */
+
+/**
 public class DealsInfo {
 
 
@@ -89,7 +91,7 @@ public class DealsInfo {
 
         public int getSumm(){
             for (Product prod: products) {
-                summ = summ + products.getCost();
+                summ = summ + Product.getCost();
             }
             return summ;
 
@@ -99,3 +101,5 @@ public class DealsInfo {
 
 
 }
+
+*/
