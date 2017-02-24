@@ -61,6 +61,98 @@
     \uhhh - код символа в 16-ричной записи (hhhh - 16-ричное число
 *****
 
+*****String (строки).
+    В Java строки  реализованы в виде класса из пакета java.lang. Класс строк неизменяемый тип классов - класс с методами
+не изменяющие внутреннее состояние объекта, созданного на их основе, а возвращают новый новый экземпляр класса.
+Нкмерация символов строк с 0 (ноль).
+    Количество символов в строке:метод length().
+int a; String s = "Hello World!";
+a=s.length();
+System.out.println("Количество символов в строке равно "+a);
+System.out.println("Количество символов в строке равно "+s.length())
+    Слияние строк: требуют больших затрат системных ресурсов.
+String s1 = "Hello ";
+String s2 = "World!";
+String s3 = s1+s2;
+Создаётся 3 объекта, требующих выделение памяти. Более эффективно класс SrtingBuffer (буфер обмена):
+StringBuffer s = new StringBuffer ();
+s.append("Hello ");
+s.append("World!");
+String s1 = s.toString();
+По умолчанию StringBuffer выделяет память на 16 символов - для увеличения кол-ва символов StringBuffer (105).
+Strin
+    Извлечение части (подстроки) строки: String. substring(). Это метод создаёт новую копию символов исходной строки из
+указанного диапазона. Можно указать: только индекс первого символа - копия от символа и до конца строки или указать
+начальный и конечный (не включая его) символ.
+int start = 6; int end = 11;
+String greetings = "Hello World!";
+String substr = greetings.substring(start, end);
+System.out.println (substr);
+или
+"Hello World!".substring(6) -> "World!"
+"Hello World!".substring(3, 8) -> "lo Wo"
+    Поиск символа или текста: Первое вхождение - indexOF(). Последнее вхождение - lastindexOf (). Эти методы возвращают
+индекс (позицию) первого или последнего искомого символа. При отсутствии элемента: -1. Методы определяющие начало и
+окончание текста определённой строкой: startsWith() и endsWith () - возвращают тип boolean
+int index; boolean index2;
+String s1 = "Hello World!";th ()
+System.out.print("Первое вхождение:");
+index = s1.indexOf("o");
+System.out.println(index); ->4
+System.out.print("Последнее вхождение:");
+index = s1.lastIndexOf("o");
+System.out.println(index); ->7
+System.out.print("Нет элемента:");
+index = s1.indexOf("a");
+System.out.println(index); ->-1
+System.out.print("Первое вхождение текста:");
+index = s1.indexOf("Hello");
+System.out.println(index); ->0
+System.out.print("Текст в начале и в конце:");
+index2 = s1.startsWith("Hello"); ->true
+System.out.println(index2);
+index2 = s1.startsWith("World"); ->false
+System.out.println(index2);
+index2 = s1.endsWith("World!"); ->true
+System.out.println(index2);
+    Извлечение символа или текста: метод chatAt()  с указанием помера позиции
+int a = 6; char c;
+String s = "Hello World!";
+c=s.charAt(a);
+System.out.println("Символ '"+c+"' находится на позиции №"+a);
+String surname = "Иванов";
+String name = "Иван";
+String name2 = "Иванович";
+System.out.println(surname+" "+name.charAt(0)+"."+name2.charAt(0)+"."); -> Иванов И.И.
+    Замена символа в строке: метод replace("a","b") - замена символа 'a' на 'b'
+String s = "Hello World!";
+System.out.println(s); ->Hello World!
+String s1 = s.replace("H","h");
+System.out.println(s1); ->hello World!
+String s2 = s.replace("l","L");
+System.out.println(s2); ->HeLLo WorLd!
+    Замена регистра букв: методы - toLowerCase() И toUpperCase().
+String s = "Hello World!";
+String s1 = s.toLowerCase();
+System.out.println(s1); ->hello world!
+String s2 = s.toUpperCase();
+    Сравнение строк: методы - equals() и equalsIgnoreCase() с учётом и без учёта регистра символов:
+boolean a;String s = "Hello World!";
+System.out.print("С учетом регистра ");
+String s1= s.toLowerCase();
+a=s.equals(s1);
+System.out.println(a);
+System.out.print("Без учетом регистра "); -> С учетом регистра false
+a=s.equalsIgnoreCase(s1);
+System.out.println(a) -> Без учетом регистра true
+    Преобразование простых типов в строковые: метод valueOf()(явный способ) и + (слияние строк = неявный способ).
+Преобразование в строку значений любых типов.
+
+
+
+
+*****
+
 *****Frame
 1. import javax.swing.JFrame;
 public class Frame {
