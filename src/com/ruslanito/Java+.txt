@@ -147,8 +147,31 @@ a=s.equalsIgnoreCase(s1);
 System.out.println(a) -> Без учетом регистра true
     Преобразование простых типов в строковые: метод valueOf()(явный способ) и + (слияние строк = неявный способ).
 Преобразование в строку значений любых типов.
-
-
+s=String.valueOf(true);
+System.out.println("boolean: " + s);
+s=String.valueOf((byte)0xFF);
+System.out.println("byte: " + s);
+s=String.valueOf('a');
+System.out.println("char: " + s);
+s=String.valueOf((short)99);
+System.out.println("short: " + s);
+s=String.valueOf(1023);
+System.out.println("int: " + s);
+s=String.valueOf(92489L);
+System.out.println("long: " + s);
+s=String.valueOf(6.57F);
+System.out.println("float: " + s);
+s=String.valueOf(6.57D);
+System.out.println("double: " + s);
+    Проверка содержимого строки: метод isEmpty (). Принимает значения: true или false
+String s= "";
+if (s.isEmpty()){System.out.println("Нет значения");
+} else {System.out.println(s);}
+    Разбиение строки на массив строк: метод split ().
+String s = "мама мыла раму";
+String s1[] = s.split("");
+int a = s.length();
+for (int i=0; i<a;i++){System.out.println("s1["+i+"]="+s1[i]);}
 
 
 *****
