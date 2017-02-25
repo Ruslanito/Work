@@ -1,6 +1,4 @@
-package com.ruslanito.Core_Srting;
-
-import com.sun.org.apache.xpath.internal.SourceTree;
+package com.ruslanito.Core_String;
 
 /**
  * Created by Ruslanito on 24.02.2017.

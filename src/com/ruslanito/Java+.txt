@@ -172,7 +172,15 @@ String s = "мама мыла раму";
 String s1[] = s.split("");
 int a = s.length();
 for (int i=0; i<a;i++){System.out.println("s1["+i+"]="+s1[i]);}
-
+    Преобразование целого числа в строку и обратно: методы класса Integer - parseInt() и toString().
+System.out.println("Строка в целое число:");
+String s = "101";
+int intvalue = Integer.parseInt(s);
+System.out.println(intvalue);
+System.out.println("Целое число в строку:");
+int intv = 121;
+String sv = Integer.toString(intv);
+System.out.println(sv);
 
 *****
 
