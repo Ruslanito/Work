@@ -7,8 +7,8 @@ import java.util.Arrays;
  */
 public class P1_5ArrayInvert {
     public static void main(String[] args) {
-        int[] arr = new int[4];
-        int[] arr2 = new int[4];
+        int[] arr = new int[9];
+        int[] arr2 = new int[9];
         int i, k, temp;
 
         System.out.println(arr.length);
@@ -37,11 +37,11 @@ public class P1_5ArrayInvert {
         System.out.println("С помощью временной переменной");
         System.out.println("Исходный массив arr[] имеет вид:");
         System.out.println(Arrays.toString(arr));
-        for (k = arr.length - 1, i = 0; i < arr.length/2; i++) {
+        for (k = arr.length - 1, i = 0; i < arr.length / 2; i++) {
             temp = arr[i];
-            arr[i] = arr[k-i];
-            arr[k-i] = temp;
-            System.out.print("arr["+(k-i)+"]="+arr[k-i]+" arr["+i+"]="+arr[i]+" temp="+temp);
+            arr[i] = arr[k - i];
+            arr[k - i] = temp;
+            System.out.print("arr[" + (k - i) + "]=" + arr[k - i] + " arr[" + i + "]=" + arr[i] + " temp=" + temp);
             System.out.println();
         }
         System.out.println();
