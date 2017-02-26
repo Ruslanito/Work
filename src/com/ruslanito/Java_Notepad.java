@@ -7,11 +7,10 @@ import java.io.IOException;
  */
 public class Java_Notepad {
     public static void main(String[] args) {
-        try{
+        try {
             Runtime.getRuntime().exec("notepad.exe");
-            }
-            catch (IOException ioe){
+        } catch (IOException ioe) {
             ioe.printStackTrace();
-            }
+        }
     }
 }
